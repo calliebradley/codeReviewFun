@@ -72,7 +72,7 @@ class Movement():
 if __name__ == '__main__':
 
     # Take input
-    Movement.input()
+    movement = Movement.input()
     max_x, max_y = map(int, raw_input().split())
     vehicle_one_pos = raw_input().split()
     vehicle_one_commands = raw_input()
@@ -85,10 +85,10 @@ if __name__ == '__main__':
 
     # Move vehicles
     for command in vehicle_one_commands:
-        vehicle_one = Movement.move(vehicle_one,command)
+        vehicle_one = movement.move(vehicle_one,command)
 
     for command in vehicle_two_commands:
-        vehicle_two = Movement.move(vehicle_two,command)
+        vehicle_two = movement.move(vehicle_two,command)
 
     # Return output
     print "Vehicle one's new position: (", vehicle_one.x,",", vehicle_one.y,"), facing ", vehicle_one.face
